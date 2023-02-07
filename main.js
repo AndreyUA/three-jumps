@@ -1,10 +1,8 @@
-import "./style.css";
-
-console.log("hello world");
-
+import "reset-css";
 import * as THREE from "three";
-
 import { PointerLockControls } from "three/addons/controls/PointerLockControls.js";
+
+import "./style.css";
 
 let camera, scene, renderer, controls;
 
@@ -37,7 +35,7 @@ function init() {
   camera.position.y = 10;
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xffffff);
+  scene.background = new THREE.Color(0x7F00FF);
   scene.fog = new THREE.Fog(0xffffff, 0, 750);
 
   const light = new THREE.HemisphereLight(0xeeeeff, 0x777788, 0.75);
